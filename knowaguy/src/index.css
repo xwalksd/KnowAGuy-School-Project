@@ -1,0 +1,256 @@
+@media(max-width: 569px) {
+ 
+    .handyman-signup{
+        display: none;
+    } 
+    .signup button{
+        margin-top: 6%;
+        margin-bottom: 5%;
+    }
+    /* .navigation .navbar-toggler {
+        margin-right: 10px;
+    } */
+
+    .search h1 {
+        font-size: 35px;
+        text-align: center;
+        margin-left: -4%;
+    }
+
+    .search .input-group {
+        margin-top: 20px;
+        width: 95%;
+        margin-right: 10%;
+        text-align: center;
+    }
+
+    .search {
+        padding-bottom: 10px;
+        margin-top: 30px;
+        margin-left: 5%;
+    }
+
+    .search .form-control {
+        padding-right: 10px;
+    }
+
+    .dashboard {
+        margin-left: 5%;
+        margin-top: 10%;
+        margin-right: 5%;
+    }
+
+    .container.dashboard{
+        margin-bottom: 10%;
+        margin-right: auto;
+        margin-left: auto;
+        height: fit-content;
+
+    }
+
+    .row.parent {
+        padding-bottom: 10%;
+    }
+
+    .card-header button {
+        margin-left: 48%;
+    }
+
+    .card-header h6 {
+        margin-top: 5%;
+    }
+
+    .col-sm-12 {
+        margin-top: 6%;
+    }
+    .col-sm-12:first-child{
+        margin-top: 2%;
+    }
+
+    .col-sm-12.handyman-list{
+        overflow: overlay;
+        border-radius: 5px;
+        padding-bottom: 3%;
+    
+    }
+    .list-title-desktop{
+        display:none;
+    }
+    .col-sm-12.handyman-signup{
+        padding-top: 7%;
+        padding-bottom: 4%;
+        margin-top: 0%;
+        width: 80%;
+        border-radius: 5%;
+        margin-left: 9%;
+    }
+    .invite{
+        margin-bottom: 5%;
+    }
+   
+}
+@media (min-width: 570px) {
+
+    .result{
+        display: inline;
+    }
+    .result.fname{
+        margin-right: 3px;
+        font-weight: bold;
+    }
+    .result.lname{
+        font-weight: bold;
+        margin-right: 3%;
+    }
+    .result.phone{
+        margin-right: 5%;
+    }
+    .result.skill{
+        margin-right: 2%;
+        border: 1px solid rgb(143, 143, 143);
+        border-radius: 5px;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    .skill-list{
+        margin-top: 10px;
+    }
+    .result.rate{
+        margin-right: 3%;
+    }
+    .container.result{
+        display: block;
+        text-align: center;
+        
+    }
+    section.results{
+        margin-bottom: 10%;
+        margin-top: 2%;
+    }
+    .container.filter{
+        text-align: center;
+        width: 20%;
+        padding-top: 5px;
+        border-radius: 5px;
+    }
+
+    
+    .col-sm-12.handyman-list{
+        margin-left: 9%;
+        overflow: overlay;
+        border-radius: 5px;
+        border: 1px solid rgb(143, 143, 143);
+        width: 40%;
+        
+    }
+    .profile-name{
+        margin-top: 2%;
+    }
+    .remove-button button{
+        margin-left: 62%;
+        margin-top: 1%;
+    }
+    .row.innercard{
+        margin-right: -18%;
+    }
+    .list-profiles{
+        width: 91%;
+    }
+    .col-sm-12.list-layout{
+        padding-left: 10%;
+    }
+    .col-sm-12.list-layout:last-child{
+        margin-bottom: 5%;
+    }
+    .col-sm-12.list-layout:first-child{
+        margin-top: 5%;
+    }
+    .skills{
+        width: 50%;
+        margin-left: -12%;
+    }
+    .search h1{
+        margin-top: 2%;
+        margin-left: 40%;
+        margin-bottom: 2%;
+        
+    }
+    .input-group{
+        width: 50%;
+        height: 50%;
+        margin-left: 25%;
+    }
+    .d-grid .btn{
+        display: none;
+    }
+    .dashboard header{
+        margin-left: 2%;
+        margin-bottom: 2%;
+    }
+    .col-sm-12.list-layout{
+        margin-bottom: 2%;
+    }
+   
+    .handyman-signup{
+        border: 1px solid rgb(143, 143, 143);
+        border-radius: 5px;
+        margin-left: 4%;
+        width: 32%;
+    }
+    .list-title-mobile{
+        display:none;
+    }
+    .list-title-desktop{
+        margin-top: 8%;
+        text-align: center;
+    }
+    
+    .invite{
+        margin-top: 10%;
+        margin-bottom: 7%;
+        text-align: center;
+    }
+    .handyman-signup input,.handyman-signup label{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .handyman-signup input:not(:first-child),.handyman-signup label:not(:first-child){
+        margin-bottom: 3%;
+    }
+    .handyman-signup button{
+        margin-top: 5%;
+        margin-left: 51%;
+    }
+    .handyman-signup{
+        height: 554px;
+    }
+    
+    .handyman-list{
+        margin-bottom: 20%;
+    }
+    
+    .container.dashboard{
+        margin-left: 17%;
+    }
+}
+.col-6:nth-child(2) h6 {
+    text-align: center;
+    margin-top: 2%;
+    border: 2px solid rgba(0, 0, 0, 0.175);
+    border-radius: 5px;
+}
+/* .navbar-nav {
+    margin-left: 2%;
+}
+.navigation .navbar-brand {
+    margin-left: 10px;
+} */
+hr {
+    margin-left: 14%;
+    width: 70%;
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
+body { min-height: 100vh; }
