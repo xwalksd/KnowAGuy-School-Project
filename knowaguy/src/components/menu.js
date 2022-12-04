@@ -1,12 +1,24 @@
 import React from "react";
 import { handyMen } from "../handymen";
 import { Dashboard } from "./dashboard";
+import Button  from 'react-bootstrap/Button'
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import { userList } from "../userlist";
+
 
 
 export function MainMenu(){
     const [isActive, setIsActive] = React.useState(false);
     const handleClick = (event) => {
         setIsActive(current => !current);
+    }
+    const handleAdd = (event,index) => {
+       userList.push(handyMen[index]);
+       userList.forEach(element => {
+        console.log(element);
+
+       });
     }
     return(
         <>
@@ -21,9 +33,30 @@ export function MainMenu(){
            <section style={{display: isActive ? 'block': 'none'}}className="results">
                     <div className="container filter bg-light">
                         <h4>Filter By</h4>
+                        <div className="row justify-content-center">
+                        <div className="col-lg-6 col-6 skill">
+                            <DropdownButton variant="outline-secondary" id="skill-dropdown" title="Skill">
+                                <Dropdown.Item href="#/action-1">Drywall Installer</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Electrician</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Landscaper</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Plumber</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Tile Installer</Dropdown.Item>
+
+                            </DropdownButton>
+                        </div>
+                        <div className="col-lg-6 col-6 rate">
+                            <DropdownButton variant="outline-secondary" id="rate-dropdown" title="Rate">
+                                <Dropdown.Item href="#/action-1">Ascending</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Descending</Dropdown.Item>
+                            </DropdownButton>
+                        </div>
+
+                        </div>
+                        
                     </div>
-                      {handyMen.map(handyman =>
+                      {handyMen.map((handyman,id) =>
                         <div className="container result">
+                            <div className="border">
                             <ul>
                                 <li className="result fname">
                                     {handyman.first_name}
@@ -39,7 +72,7 @@ export function MainMenu(){
                                     <b>Rate: $</b>
                                     {handyman.pay_rate}
                                 </li>
-                                <button className=" btn btn-md btn-outline result">Add to List</button>
+                                <Button onClick={(event)=>handleAdd(event,id)} size="sm" variant="outline-secondary"className="result">Add to List</Button>
 
                                     <ul className="skill-list">
                                         {handyman.skills.map(handyman =>
@@ -55,10 +88,11 @@ export function MainMenu(){
                                 
                             </ul>
                         </div>
+                        </div>
                     )}
                 
            </section>
-           <Dashboard data={isActive}/>
+           <Dashboard data={isActive} newArr={userList}/>
         </>
         
     );

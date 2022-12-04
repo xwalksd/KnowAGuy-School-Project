@@ -1,4 +1,4 @@
-export const handyMen = [{"first_name":"Jessika","last_name":"Bulcroft","phone_number":"574-571-8935","pay_rate":9.41,"skills":["Tile Installer"]},
+export var handyMen = [{"first_name":"Jessika","last_name":"Bulcroft","phone_number":"574-571-8935","pay_rate":9.41,"skills":["Tile Installer"]},
 {"first_name":"Alwyn","last_name":"Fewkes","phone_number":"713-481-7874","pay_rate":35.62,"skills":["Electrician"]},
 {"first_name":"Laetitia","last_name":"Gladbach","phone_number":"426-734-5445","pay_rate":30.85,"skills":["Electrician"]},
 {"first_name":"Ewan","last_name":"Fenning","phone_number":"464-780-2206","pay_rate":3.59,"skills":["Drywall Installer","Landscaper","Plumber"]},

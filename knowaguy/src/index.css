@@ -1,5 +1,6 @@
 @media(max-width: 569px) {
- 
+    
+
     .handyman-signup{
         display: none;
     } 
@@ -87,10 +88,86 @@
     .invite{
         margin-bottom: 5%;
     }
-   
+    .container.filter{
+        text-align: center;
+        width: 50%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 5px;
+        margin-bottom: 2%;
+        border: 1px solid rgb(143, 143, 143);
+
+    }
+    div.border{
+        border: 1px solid rgb(143, 143, 143);
+        border-radius: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-top: 5%;
+    }
+    .border button{
+        margin-left:70%;
+    }
+    
+    .result{
+        display: inline;
+    }
+    .result.fname{
+        margin-top: 5%;
+        margin-right: 3px;
+        font-weight: bold;
+    }
+    .result.lname{
+        font-weight: bold;
+        margin-right: 3%;
+    }
+    .result.phone{
+        
+        margin-right: 5%;
+        display:block;
+    }
+    .result.rate{
+        margin-right: 29%;
+        display: block;
+    }
+    .result.phone,.result.rate{
+        margin-left: 7%;
+    }
+    .result.skill{
+        margin-right: 2%;
+        border: 2px solid rgb(143, 143, 143);
+        border-radius: 5px;
+        padding-left: 1%;
+        padding-right: 1%;
+        
+    }
+    .skill-list.my-list{
+        margin-right: 10%;
+    }
+    li.my-list{
+        margin-right: 2%;
+        border: 2px solid rgb(143, 143, 143);
+        border-radius: 5px;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: 2%;
+    }
+    .skill-list{
+        margin-top: 10px;
+        text-align: left;
+        margin-left: -10%;
+       
+    }
+    .col-6.skills{
+        width: 382px;
+    }
+
+    
 }
 @media (min-width: 570px) {
-
+    div.border{
+        border: none !important;
+    }
     .result{
         display: inline;
     }
@@ -114,15 +191,19 @@
     }
     .skill-list{
         margin-top: 10px;
+        text-align: left;
+        
     }
     .result.rate{
         margin-right: 3%;
     }
     .container.result{
         display: block;
-        text-align: center;
+        text-align: left;
+        margin-left: 31%;
         
     }
+    
     section.results{
         margin-bottom: 10%;
         margin-top: 2%;
@@ -130,9 +211,21 @@
     .container.filter{
         text-align: center;
         width: 20%;
-        padding-top: 5px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         border-radius: 5px;
+        margin-bottom: 2%;
+        border: 1px solid rgb(143, 143, 143);
+
     }
+    .container.filter h4{
+        font-weight: lighter;
+    }
+    .container .col-lg-6.rate{
+        margin-left: -30%;
+    }
+    
+    
 
     
     .col-sm-12.handyman-list{
@@ -233,12 +326,8 @@
         margin-left: 17%;
     }
 }
-.col-6:nth-child(2) h6 {
-    text-align: center;
-    margin-top: 2%;
-    border: 2px solid rgba(0, 0, 0, 0.175);
-    border-radius: 5px;
-}
+
+
 /* .navbar-nav {
     margin-left: 2%;
 }
