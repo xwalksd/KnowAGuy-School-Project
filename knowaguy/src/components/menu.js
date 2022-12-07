@@ -4,24 +4,53 @@ import { Dashboard } from "./dashboard";
 import Button  from 'react-bootstrap/Button'
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import { userList } from "../userlist";
+// import { userList } from "../userlist";
 
 
 
-export function MainMenu(){
+export function MainMenu(props){
     const [isActive, setIsActive] = React.useState(false);
     const handleClick = (event) => {
         setIsActive(current => !current);
+        
+       
     }
-    const handleAdd = (event,index) => {
-       userList.push(handyMen[index]);
-       userList.forEach(element => {
-        console.log(element);
+    const handleAdd = (event) => {
+        
+        props.setList(current => [...current, handyMen[event.handyman.id]]);
+        
 
-       });
-    }
+    };
+    const listItems = props.filteredList.map(handyman => {
+        console.log(handyman.first_name);
+       return <div key={handyman.id} className="container result">
+            <div key={handyman.id} className="border">
+                <ul>
+                    <li key={handyman.id} className="result fname">
+                        {handyman.first_name}
+                    </li>
+                    <li key={handyman.id} className="result lname">
+                        {handyman.last_name}
+                    </li>
+                    <li key={handyman.id} className="result phone">
+                        <b>Phone Number: </b>
+                        {handyman.phone_number}
+                    </li>
+                    <li key={handyman.id} className="result rate">
+                        <b>Rate: $</b>
+                        {handyman.pay_rate}
+                    </li>
+                    <Button onClick={(event) => handleAdd(event, handyman.id)} size="sm" variant="outline-secondary" className="result">Add to List</Button>
+
+                
+
+                </ul>
+            </div>
+        </div>
+    });
     return(
         <>
+         
             <section  className="search">
                 <h1 style={{display: isActive ? 'none': 'block'}} >How Can We Help?</h1>
                 <div style={{marginTop: isActive ? '2%': ''}} className="input-group input-group-lg mb-3">
@@ -54,48 +83,24 @@ export function MainMenu(){
                         </div>
                         
                     </div>
-                      {handyMen.map((handyman,id) =>
-                        <div className="container result">
-                            <div className="border">
-                            <ul>
-                                <li className="result fname">
-                                    {handyman.first_name}
-                                </li>
-                                <li className="result lname">
-                                    {handyman.last_name}
-                                </li>
-                                <li className="result phone">
-                                    <b>Phone Number: </b>
-                                    {handyman.phone_number}
-                                </li>
-                                <li className="result rate">
-                                    <b>Rate: $</b>
-                                    {handyman.pay_rate}
-                                </li>
-                                <Button onClick={(event)=>handleAdd(event,id)} size="sm" variant="outline-secondary"className="result">Add to List</Button>
-
-                                    <ul className="skill-list">
-                                        {handyman.skills.map(handyman =>
-                                            
-                                                <li className="result skill">{handyman}</li>
-                                        )}
-                                    </ul>
-
-                                
-                                
-                                
-                                
-                                
-                            </ul>
-                        </div>
-                        </div>
-                    )}
+                   {listItems}
+            
+                
                 
            </section>
-           <Dashboard data={isActive} newArr={userList}/>
+           <Dashboard data={isActive} setList = {props.setList} yourList = {props.yourList}/>
         </>
         
     );
     
 
 }
+{/* <ul key={handyman.id}className="skill-list">
+                                    
+ {handyman.skills.map((skill) => 
+
+    <li>{skill}</li>
+
+)
+}  
+</ul> */}

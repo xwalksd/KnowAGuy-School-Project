@@ -1,9 +1,14 @@
 @media(max-width: 569px) {
-    
-
-    .handyman-signup{
-        display: none;
-    } 
+    .card.list-profiles{
+        margin-top: 7%;
+    }
+    .card.list-profiles:last-child{
+        margin-bottom: 5%;
+    }
+    form{
+        width: 80%;
+        margin-left: 10%;
+    }
     .signup button{
         margin-top: 6%;
         margin-bottom: 5%;
@@ -72,21 +77,23 @@
         overflow: overlay;
         border-radius: 5px;
         padding-bottom: 3%;
-    
+        height: 454px;
     }
     .list-title-desktop{
-        display:none;
+        text-align: center;
+        margin-top: 2%;
     }
     .col-sm-12.handyman-signup{
         padding-top: 7%;
-        padding-bottom: 4%;
-        margin-top: 0%;
-        width: 80%;
-        border-radius: 5%;
-        margin-left: 9%;
+padding-bottom: 4%;
+margin-top: 10%;
+width: 85%;
+border-radius: 5%;
+margin-left: 9%;    
     }
     .invite{
         margin-bottom: 5%;
+        text-align: center;
     }
     .container.filter{
         text-align: center;
@@ -200,7 +207,7 @@
     .container.result{
         display: block;
         text-align: left;
-        margin-left: 31%;
+        margin-left: 27%;
         
     }
     
@@ -226,15 +233,20 @@
     }
     
     
-
+    .result button{
+        float: right;
+margin-right: 39%;
+    }
     
     .col-sm-12.handyman-list{
-        margin-left: 9%;
-        overflow: overlay;
-        border-radius: 5px;
-        border: 1px solid rgb(143, 143, 143);
-        width: 40%;
-        
+        margin-left: 19%;
+            overflow: overlay;
+            border-radius: 5px;
+            border: 1px solid rgb(143, 143, 143);
+            width: 60%;
+            margin-top: 5%;
+            height: 600px;
+            display: table;
     }
     .profile-name{
         margin-top: 2%;
@@ -248,6 +260,7 @@
     }
     .list-profiles{
         width: 91%;
+        margin-top: 5%;
     }
     .col-sm-12.list-layout{
         padding-left: 10%;
@@ -312,10 +325,14 @@
     }
     .handyman-signup button{
         margin-top: 5%;
-        margin-left: 51%;
+        margin-left: 70%;
     }
     .handyman-signup{
-        height: 554px;
+        height: 917px;
+margin-left: 33%;
+margin-top: 2%;
+margin-bottom: 3%;
+        
     }
     
     .handyman-list{
@@ -326,8 +343,17 @@
         margin-left: 17%;
     }
 }
-
-
+.dropdown-button{
+    background-color: white;
+    color:black;
+    border-color: white;
+}
+.search input{
+    text-align: center;
+}
+nav-link{
+    color: #707071 !important;
+}
 /* .navbar-nav {
     margin-left: 2%;
 }
